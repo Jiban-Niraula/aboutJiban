@@ -2,203 +2,204 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jiban Niraula - Computer Teacher & IT Professional</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jiban Niraula - Computer Teacher & IT Professional</title>
 
-    <!-- Prevent dark mode by default -->
-    <script>
-        if (localStorage.theme === 'dark') {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
-    </script>
+  <!-- Prevent dark mode by default -->
+  <script>
+    if (localStorage.theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
 
-    <!-- Tailwind CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
 
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
 
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
 
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
 
-        ::-webkit-scrollbar-thumb {
-            background: #6366f1;
-            border-radius: 4px;
-        }
+    ::-webkit-scrollbar-thumb {
+      background: #6366f1;
+      border-radius: 4px;
+    }
 
-        ::-webkit-scrollbar-thumb:hover {
-            background: #4f46e5;
-        }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #4f46e5;
+    }
 
-        .dark ::-webkit-scrollbar-track {
-            background: #374151;
-        }
+    .dark ::-webkit-scrollbar-track {
+      background: #374151;
+    }
 
-        .dark ::-webkit-scrollbar-thumb {
-            background: #8b5cf6;
-        }
+    .dark ::-webkit-scrollbar-thumb {
+      background: #8b5cf6;
+    }
 
-        .dark ::-webkit-scrollbar-thumb:hover {
-            background: #7c3aed;
-        }
+    .dark ::-webkit-scrollbar-thumb:hover {
+      background: #7c3aed;
+    }
 
-        .gradient-bg {
-            background: linear-gradient(-45deg, #6366f1, #8b5cf6, #ec4899, #f59e0b);
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
-        }
+    .gradient-bg {
+      background: linear-gradient(-45deg, #6366f1, #8b5cf6, #ec4899, #f59e0b);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+    }
 
-        @keyframes gradient {
-            0% {
-                background-position: 0% 50%;
-            }
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
 
-            50% {
-                background-position: 100% 50%;
-            }
+      50% {
+        background-position: 100% 50%;
+      }
 
-            100% {
-                background-position: 0% 50%;
-            }
-        }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
 
-        .glass {
-            backdrop-filter: blur(16px) saturate(180%);
-            background-color: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.125);
-        }
+    .glass {
+      backdrop-filter: blur(16px) saturate(180%);
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.125);
+    }
 
-        .dark .glass {
-            background-color: rgba(17, 25, 40, 0.75);
-            border: 1px solid rgba(255, 255, 255, 0.125);
-        }
+    .dark .glass {
+      background-color: rgba(17, 25, 40, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.125);
+    }
 
-        @keyframes float {
+    @keyframes float {
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
 
-            0%,
-            100% {
-                transform: translateY(0px);
-            }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
 
-            50% {
-                transform: translateY(-20px);
-            }
-        }
+    .floating {
+      animation: float 6s ease-in-out infinite;
+    }
 
-        .floating {
-            animation: float 6s ease-in-out infinite;
-        }
+    @keyframes typing {
+      from {
+        width: 0;
+      }
 
-        @keyframes typing {
-            from {
-                width: 0;
-            }
+      to {
+        width: 100%;
+      }
+    }
 
-            to {
-                width: 100%;
-            }
-        }
-
-        .typing-effect {
-            overflow: hidden;
-            border-right: 2px solid;
-            white-space: nowrap;
-            animation: typing 3s steps(40, end);
-        }
-    </style>
+    .typing-effect {
+      display: inline-block;
+      border-right: 2px solid;
+      white-space: normal;
+      overflow-wrap: break-word;
+      animation: typing 3s steps(40, end);
+    }
+  </style>
 </head>
 
 <body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
-    <!-- Theme Toggle Button -->
-    <div class="fixed top-4 right-4 z-50">
-        <button id="theme-toggle"
-            class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600">
-            <i id="theme-icon" class="fas fa-moon text-gray-800 dark:text-yellow-400"></i>
-        </button>
+  <!-- Theme Toggle Button -->
+  <div class="fixed top-4 right-4 z-50">
+    <button id="theme-toggle"
+      class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600">
+      <i id="theme-icon" class="fas fa-moon text-gray-800 dark:text-yellow-400"></i>
+    </button>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full z-50 glass">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          Jiban Niraula
+        </h1>
+        <div class="hidden md:flex space-x-8">
+          <a href="#home" class="hover:text-blue-600 dark:hover:text-blue-400">Home</a>
+          <a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400">About</a>
+          <a href="#services" class="hover:text-blue-600 dark:hover:text-blue-400">Services</a>
+          <a href="#portfolio" class="hover:text-blue-600 dark:hover:text-blue-400">Portfolio</a>
+          <a href="#students" class="hover:text-blue-600 dark:hover:text-blue-400">For Students</a>
+          <a href="#contact" class="hover:text-blue-600 dark:hover:text-blue-400">Contact</a>
+        </div>
+        <div class="flex items-center space-x-4">
+          <button id="mobile-menu-btn"
+            class="md:hidden p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
     </div>
+    <div id="mobile-menu" class="hidden md:hidden glass">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="#home" class="block px-3 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md">Home</a>
+        <a href="#about" class="block px-3 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md">About</a>
+        <a href="#services" class="block px-3 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md">Services</a>
+        <a href="#portfolio" class="block px-3 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md">Portfolio</a>
+        <a href="#students" class="block px-3 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md">For Students</a>
+        <a href="#contact" class="block px-3 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 glass">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <h1
-                    class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                    Jiban Niraula
-                </h1>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="hover:text-blue-600 dark:hover:text-blue-400">Home</a>
-                    <a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400">About</a>
-                    <a href="#services" class="hover:text-blue-600 dark:hover:text-blue-400">Services</a>
-                    <a href="#portfolio" class="hover:text-blue-600 dark:hover:text-blue-400">Portfolio</a>
-                    <a href="#students" class="hover:text-blue-600 dark:hover:text-blue-400">For Students</a>
-                    <a href="#contact" class="hover:text-blue-600 dark:hover:text-blue-400">Contact</a>
-                </div>
-                <div class="flex items-center space-x-4">
-                    <button id="mobile-menu-btn"
-                        class="md:hidden p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
-            </div>
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen flex items-center justify-center pt-24 px-4 relative overflow-hidden">
+    <div class="absolute inset-0 gradient-bg opacity-10"></div>
+    <div class="max-w-3xl mx-auto text-center relative z-10">
+      <!-- Circular Image -->
+      <div class="w-32 h-32 sm:w-40 sm:h-40 aspect-square mx-auto mb-8 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 p-1 floating">
+        <div class="w-full h-full bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+          <img src="jiban.jpeg" alt="jiban_logo" class="w-full h-full object-cover rounded-full">
         </div>
-        <div id="mobile-menu" class="hidden md:hidden glass">
-            <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="#home" class="block px-3 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md">Home</a>
-                <a href="#about" class="block px-3 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md">About</a>
-                <a href="#services"
-                    class="block px-3 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md">Services</a>
-                <a href="#portfolio"
-                    class="block px-3 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md">Portfolio</a>
-                <a href="#students" class="block px-3 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md">For
-                    Students</a>
-                <a href="#contact"
-                    class="block px-3 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md">Contact</a>
-            </div>
-        </div>
-    </nav>
+      </div>
 
-    <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center justify-center pt-24 px-4 relative overflow-hidden">
-        <div class="absolute inset-0 gradient-bg opacity-10"></div>
-        <div class="max-w-3xl mx-auto text-center relative z-10">
-            <div class="w-40 h-40 mx-auto mb-8 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 p-1 floating">
-                <div class="w-full h-full bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center">
-                    <i class="fas fa-user-graduate text-5xl text-blue-600 dark:text-blue-400"></i>
-                </div>
-            </div>
-            <h1
-                class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                Jiban Niraula
-            </h1>
-            <p class="text-lg md:text-xl mb-8 text-gray-600 dark:text-gray-300 typing-effect">
-                Computer Teacher | IT Trainer | Aspiring DevOps Engineer
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#"
-                    class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-300">
-                    <i class="fas fa-download mr-2"></i>
-                    Download CV
-                </a>
-                <a href="#contact"
-                    class="border-2 border-blue-600 text-blue-600 dark:text-blue-400 px-6 py-3 rounded-full hover:bg-blue-600 hover:text-white dark:hover:bg-blue-400 dark:hover:text-gray-900 transition-all duration-300">
-                    <i class="fas fa-envelope mr-2"></i>
-                    Contact Me
-                </a>
-            </div>
-        </div>
-    </section>
+      <!-- Title -->
+      <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+        Jiban Niraula
+      </h1>
+
+      <!-- Subtitle with responsive text -->
+      <p class="text-lg md:text-xl mb-8 text-gray-600 dark:text-gray-300 md:typing-effect">
+        Computer Teacher | IT Trainer | Aspiring DevOps Engineer
+      </p>
+
+      <!-- Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#"
+          class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-300 text-center">
+          <i class="fas fa-download mr-2"></i>
+          Download CV
+        </a>
+        <a href="#contact"
+          class="border-2 border-blue-600 text-blue-600 dark:text-blue-400 px-6 py-3 rounded-full hover:bg-blue-600 hover:text-white dark:hover:bg-blue-400 dark:hover:text-gray-900 transition-all duration-300 text-center">
+          <i class="fas fa-envelope mr-2"></i>
+          Contact Me
+        </a>
+      </div>
+    </div>
+  </section>
 
     <!-- About Section -->
     <section id="about" class="py-20 bg-white dark:bg-gray-800">
@@ -313,125 +314,149 @@
     </section>
 
     <!-- For Students Section -->
-    <section id="students"
-        class="py-20 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900 dark:to-purple-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2
-                    class="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                    For Students</h2>
-                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mt-4">
-                    Access grade-wise learning resources and helpful tools.
+<section id="students"
+    class="py-20 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900 dark:to-purple-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                For Students
+            </h2>
+            <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mt-4">
+                Access grade-wise learning resources and helpful tools.
+            </p>
+        </div>
+        <div class="grid md:grid-cols-4 gap-6">
+            <!-- Grade 8 -->
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-xl text-center">
+                <div class="text-3xl text-blue-600 dark:text-blue-400 font-bold mb-2">Grade 8</div>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">Basics of computer science and digital literacy
+                    concepts.</p>
+                <a href="#"
+                    class="text-blue-600 dark:text-blue-400 underline">View Resources</a>
+            </div>
+            <!-- Grade 9 -->
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-xl text-center">
+                <div class="text-3xl text-green-600 dark:text-green-400 font-bold mb-2">Grade 9</div>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">Advanced topics including HTML, CSS and programming
+                    logic.</p>
+                <a href="#"
+                    class="text-green-600 dark:text-green-400 underline">View Resources</a>
+            </div>
+            <!-- Grade 10 -->
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-xl text-center">
+                <div class="text-3xl text-purple-600 dark:text-purple-400 font-bold mb-2">Grade 10</div>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">Projects, database concepts and full-stack
+                    fundamentals.</p>
+                <a href="#"
+                    class="text-purple-600 dark:text-purple-400 underline">View Resources</a>
+            </div>
+            <!-- Others -->
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-xl text-center">
+                <div class="text-3xl text-pink-600 dark:text-pink-400 font-bold mb-2">Others</div>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">
+                    Click here for resources like <a href="https://drive.google.com/drive/folders/139lNiEUFnTeyVeltGeQJzfHrDpzwfEHj?usp=sharing"
+                        class="underline text-pink-600 dark:text-pink-400 font-semibold">Tuition Classes</a> and more.
                 </p>
+                <a href="https://drive.google.com/drive/folders/1whXkB72yjFMtx0OxMBEh8B3cKvUD5gCf?usp=sharing"
+                    class="text-pink-600 dark:text-pink-400 underline">View Resources</a>
             </div>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl text-center">
-                    <div class="text-3xl text-blue-600 dark:text-blue-400 font-bold mb-2">Grade 8</div>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4">Basics of computer science and digital literacy
-                        concepts.</p>
-                    <a href="#" class="text-blue-600 dark:text-blue-400 underline">View Resources</a>
-                </div>
-                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl text-center">
-                    <div class="text-3xl text-green-600 dark:text-green-400 font-bold mb-2">Grade 9</div>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4">Advanced topics including HTML, CSS and programming
-                        logic.</p>
-                    <a href="#" class="text-green-600 dark:text-green-400 underline">View Resources</a>
-                </div>
-                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl text-center">
-                    <div class="text-3xl text-purple-600 dark:text-purple-400 font-bold mb-2">Grade 10</div>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4">Projects, database concepts and full-stack
-                        fundamentals.</p>
-                    <a href="#" class="text-purple-600 dark:text-purple-400 underline">View Resources</a>
-                </div>
-            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white dark:bg-gray-800">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2
+                class="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
+                Contact
+            </h2>
+            <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">Have questions or want to collaborate? Get in
+                touch!</p>
+
+            <form action="https://formspree.io/f/xdkdnawp" method="POST" class="space-y-4" id="contactForm">
+                <input type="text" name="name" placeholder="Your Name"
+                    class="w-full px-4 py-2 border rounded-md dark:bg-gray-700 dark:border-gray-600" required>
+                <input type="email" name="email" placeholder="Your Email"
+                    class="w-full px-4 py-2 border rounded-md dark:bg-gray-700 dark:border-gray-600" required>
+                <textarea name="message" placeholder="Your Message" rows="5"
+                    class="w-full px-4 py-2 border rounded-md dark:bg-gray-700 dark:border-gray-600"
+                    required></textarea>
+                <button type="submit"
+                    class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg">
+                    Send Message
+                </button>
+            </form>
+
+            <!-- Message response -->
+            <div id="responseMessage" class="mt-4 text-center text-lg font-medium"></div>
         </div>
     </section>
 
-   <!-- Contact Section -->
-<section id="contact" class="py-20 bg-white dark:bg-gray-800">
-  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h2 class="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
-      Contact
-    </h2>
-    <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">Have questions or want to collaborate? Get in touch!</p>
+    <!-- Theme Toggle Script and other existing scripts -->
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
 
-    <form action="https://formspree.io/f/xdkdnawp" method="POST" class="space-y-4" id="contactForm">
-      <input type="text" name="name" placeholder="Your Name" class="w-full px-4 py-2 border rounded-md dark:bg-gray-700 dark:border-gray-600" required>
-      <input type="email" name="email" placeholder="Your Email" class="w-full px-4 py-2 border rounded-md dark:bg-gray-700 dark:border-gray-600" required>
-      <textarea name="message" placeholder="Your Message" rows="5" class="w-full px-4 py-2 border rounded-md dark:bg-gray-700 dark:border-gray-600" required></textarea>
-      <button type="submit" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg">
-        Send Message
-      </button>
-    </form>
-
-    <!-- Message response -->
-    <div id="responseMessage" class="mt-4 text-center text-lg font-medium"></div>
-  </div>
-</section>
-
-<!-- Theme Toggle Script and other existing scripts -->
-<script>
-  const themeToggle = document.getElementById('theme-toggle');
-  const themeIcon = document.getElementById('theme-icon');
-
-  function applyTheme(theme) {
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
-      themeIcon.classList.remove('fa-moon');
-      themeIcon.classList.add('fa-sun');
-    } else {
-      document.documentElement.classList.remove('dark');
-      themeIcon.classList.remove('fa-sun');
-      themeIcon.classList.add('fa-moon');
-    }
-  }
-
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme) {
-    applyTheme(savedTheme);
-  }
-
-  themeToggle?.addEventListener('click', () => {
-    const isDark = document.documentElement.classList.contains('dark');
-    const newTheme = isDark ? 'light' : 'dark';
-    localStorage.setItem('theme', newTheme);
-    applyTheme(newTheme);
-  });
-
-  document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
-    document.getElementById('mobile-menu').classList.toggle('hidden');
-  });
-
-  // Updated form submission using fetch to Formspree
-  const form = document.getElementById('contactForm');
-  const responseDiv = document.getElementById('responseMessage');
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    const formData = new FormData(form);
-
-    try {
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
+        function applyTheme(theme) {
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            } else {
+                document.documentElement.classList.remove('dark');
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            }
         }
-      });
 
-      if (response.ok) {
-        responseDiv.style.color = 'green';
-        responseDiv.textContent = 'Your message was sent successfully! Thank you.';
-        form.reset();
-      } else {
-        const data = await response.json();
-        responseDiv.style.color = 'red';
-        responseDiv.textContent = data.error || 'Sorry, there was an error sending your message. Please try again later.';
-      }
-    } catch (error) {
-      responseDiv.style.color = 'red';
-      responseDiv.textContent = 'Sorry, there was an error sending your message. Please try again later.';
-    }
-  });
-</script>
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            applyTheme(savedTheme);
+        }
+
+        themeToggle?.addEventListener('click', () => {
+            const isDark = document.documentElement.classList.contains('dark');
+            const newTheme = isDark ? 'light' : 'dark';
+            localStorage.setItem('theme', newTheme);
+            applyTheme(newTheme);
+        });
+
+        document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Updated form submission using fetch to Formspree
+        const form = document.getElementById('contactForm');
+        const responseDiv = document.getElementById('responseMessage');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    responseDiv.style.color = 'green';
+                    responseDiv.textContent = 'Your message was sent successfully! Thank you.';
+                    form.reset();
+                } else {
+                    const data = await response.json();
+                    responseDiv.style.color = 'red';
+                    responseDiv.textContent = data.error || 'Sorry, there was an error sending your message. Please try again later.';
+                }
+            } catch (error) {
+                responseDiv.style.color = 'red';
+                responseDiv.textContent = 'Sorry, there was an error sending your message. Please try again later.';
+            }
+        });
+    </script>
